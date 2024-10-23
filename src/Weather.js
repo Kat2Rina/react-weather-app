@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
+import WeatherIcon from "./WeatherIcon";
 import "./App.css";
 
 export default function Weather(props) {
@@ -16,7 +17,7 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
-      iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
+      icon: response.data.weather[0].icon,
       wind: response.data.wind.speed,
       city: response.data.name,
     });
@@ -71,11 +72,8 @@ export default function Weather(props) {
         <div className="row mt-3">
           <div className="col-6">
             <div className="d-flex align-items-center">
-              <img
-                src={weatherData.iconUrl}
-                alt={weatherData.description}
-                className="me-2"
-              />
+              <WeatherIcon code={weatherData.icon} size={50} />
+
               <span className="temperature">
                 {Math.round(weatherData.temperature)}
               </span>
