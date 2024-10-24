@@ -16,7 +16,7 @@ export default function App() {
             open-sourced on GitHub
           </a>{" "}
           and hosted on{" "}
-          <a href="https://github.com/Kat2Rina/react-weather-app">Netlify</a>
+          <a href="https://magenta-yeot-308d19.netlify.app/">Netlify</a>
         </footer>
       </div>
     </div>
