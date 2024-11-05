@@ -3,6 +3,7 @@ import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
 import WeatherIcon from "./WeatherIcon";
+import WeatherForecast from "./WeatherForecast";
 import WeatherTemperature from "./WeatherTemperature";
 import "./App.css";
 
@@ -84,6 +85,7 @@ export default function Weather(props) {
             </ul>
           </div>
         </div>
+        <WeatherForecast />
       </div>
     );
   } else {
